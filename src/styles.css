@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap');
+
+* {
+    font-family: "Jaro", sans-serif;
+}
+
+body {
+    background-color: #000;
+}
+
+h1 {
+    text-align: center;
+    color: #37f7ff;
+}
+
+.image{
+    text-align: center;
+}
+
+.image img{
+    width: 40%;
+}
+
+.socials{
+}
+
+.socials a {
+    vertical-align: baseline;
+}
+
+.socials a img{
+    border-radius: 50%;
+}
+
+.socials .buy-btn{
+    background-color: #37f7ff;
+    padding: 1rem 2rem;
+    font-size: 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+}
