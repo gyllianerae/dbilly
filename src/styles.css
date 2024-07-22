@@ -6,36 +6,92 @@
 
 body {
     background-color: #000;
+    margin: 0;
+    overflow: hidden; /* Prevent scrollbars from appearing */
 }
 
 h1 {
     text-align: center;
     color: #37f7ff;
+    font-size: 10rem;
+    animation: pop 1s ease-in-out infinite; /* Add the pop animation */
 }
 
-.image{
+.image {
     text-align: center;
 }
 
-.image img{
+.image img {
     width: 40%;
 }
 
-.socials{
+.socials {
+    text-align: center;
 }
 
 .socials a {
-    vertical-align: baseline;
+    transition: transform 0.3s ease-in-out; /* Add transition for smooth scaling */
 }
 
-.socials a img{
+.socials a img:hover {
+    transform: scale(1.2);
+}
+.socials a img {
     border-radius: 50%;
 }
 
-.socials .buy-btn{
+.socials .buy-btn {
     background-color: #37f7ff;
     padding: 1rem 2rem;
-    font-size: 2.5rem;
+    font-size: 4rem;
     border-radius: 50px;
     text-decoration: none;
+    color: black;
+}
+
+.socials .buy-btn:hover{
+    color: red;
+    transform: scale(1.2);
+}
+
+
+/* Light Flash Line Animation */
+.light-flash-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure it stays behind other content */
+    pointer-events: none; /* Allow clicks to pass through */
+}
+
+.light-flash-line {
+    position: absolute;
+    width: 100%;
+    height: 2px; /* Adjust the height for the desired effect */
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.8), transparent);
+    animation: lightFlash 3s linear infinite; /* Default duration, will be overridden by JS */
+}
+
+@keyframes lightFlash {
+    0% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Popping Animation */
+@keyframes pop {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Adjust the scale value for the popping effect */
+    }
 }
