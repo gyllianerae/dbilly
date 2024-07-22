@@ -17,6 +17,12 @@ h1 {
     animation: pop 1s ease-in-out infinite; /* Add the pop animation */
 }
 
+.ca {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+}
+
 .image {
     text-align: center;
 }
