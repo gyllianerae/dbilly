@@ -66,16 +66,13 @@ p{
     text-align: center;
 }
 
-.socials a {
-    transition: transform 0.3s ease-in-out; /* Add transition for smooth scaling */
-}
-
-.socials a:hover {
-    transform: scale(1.2); /* Scale up on hover */
-}
-
 .socials a img {
+    transition: transform 0.3s ease-in-out; /* Add transition for smooth scaling */
     border-radius: 50%;
+}
+
+.socials a img:hover {
+    transform: scale(1.2);
 }
 
 .socials .buy-btn {
@@ -87,43 +84,39 @@ p{
     color: black;
 }
 
-/* Light Flash Line Animation */
-.light-flash-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Ensure it stays behind other content */
-    pointer-events: none; /* Allow clicks to pass through */
+.socials .buy-btn:hover{
+    color: red;
+    background-color: yellow;
 }
 
-.light-flash-line {
-    position: absolute;
-    width: 100%;
-    height: 2px; /* Adjust the height for the desired effect */
-    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.8), transparent);
-    animation: lightFlash 3s linear infinite; /* Default duration, will be overridden by JS */
-}
-
-@keyframes lightFlash {
-    0% {
-        transform: translateX(-100%);
+@media(max-width:1000px){
+    .socials a img{
+        width: 10%;
     }
-    50% {
-        transform: translateX(100%);
+    .socials a.buy-btn{
+        width: 20%;
+        font-size: 2rem;
     }
-    100% {
-        transform: translateX(100%);
+    .ca{
+        font-size: 0.7rem;
+    }
+    .desc{
+        font-size: 1rem;
     }
 }
-
-/* Popping Animation */
-@keyframes pop {
-    0%, 100% {
-        transform: scale(1);
+@media(max-width:485px){
+    .socials a.buy-btn{
+        display: block;
+        width: 50%;
+        text-align: center;
+        margin-top: 8px;
+        font-size: 1.5rem;
+        padding: 1rem;
     }
-    50% {
-        transform: scale(1.1); /* Adjust the scale value for the popping effect */
+    .socials a img{
+        width: 15%;
+    }
+    .ca{
+        font-size: 0.5rem;
     }
 }
